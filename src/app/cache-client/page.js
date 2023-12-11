@@ -9,6 +9,8 @@ const CacheClientPage = () => {
     getData();
   }, []);
 
+  //console.log(document.cookie);
+
   const getData = async () => {
     await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/product/polls/AppProductSearch/search/?keyword=Best%20Deals&limit=30&offset=0`,

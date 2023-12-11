@@ -13,6 +13,7 @@ const Server = async () => {
   const data = await res.json();
   const cookieStore = cookies();
   //console.log(cookieStore.get("test"));
+  //console.log(cookieStore.getAll());
   //console.log(process.env.NEXT_APP_BASE_URL);
 
   return (

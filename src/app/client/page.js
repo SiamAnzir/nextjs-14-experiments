@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-//import { cookies } from "next/headers";
 
 const ClientPage = () => {
   const [fetchData, setFetchData] = useState([]);
@@ -15,6 +14,7 @@ const ClientPage = () => {
       .then((res) => res.json())
       .then((data) => {
         setFetchData(data);
+        document.cookie = `test = ${data.products[0].product_name}`;
         //cookies().set("test", data.products[0].product_name);
       })
       .catch((err) => {
